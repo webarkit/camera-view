@@ -51,6 +51,10 @@ const hasPlaywrightChromium = (() => {
 
 export default defineConfig({
     test: {
+        api: {
+            host: "127.0.0.1",
+            port: 6331,
+        },
         coverage: {
             provider: "v8",
             include: ["src/**/*.ts"],

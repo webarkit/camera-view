@@ -1,5 +1,6 @@
 # CameraView
 
+[![npm version](https://img.shields.io/npm/v/@webarkit/camera-view.svg)](https://www.npmjs.com/package/@webarkit/camera-view)
 [![CI](https://github.com/webarkit/camera-view/actions/workflows/CI.yml/badge.svg)](https://github.com/webarkit/camera-view/actions/workflows/CI.yml)
 [![Coverage](https://img.shields.io/badge/coverage-98%25-brightgreen?logo=vitest&logoColor=white)](./docs/testing.md)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)](./tsconfig.json)
@@ -18,9 +19,19 @@ Tracker-agnostic camera capture and processing-frame geometry for the [WebARKit]
 - **producing frames:** `ImageData` (`getImage()`) and transferable `ImageBitmap` (`getImageBitmap()`) at `frameWidth × frameHeight`, throttled to `targetFrameRate`;
 - **exposing `geometry: FrameGeometry`:** a frozen, structured-cloneable plain object that can be posted directly to a worker or passed to `tracker.projectionFor(viewport, view.geometry)` ([webarkit/jsartoolkitNFT#720](https://github.com/webarkit/jsartoolkitNFT/issues/720)).
 
-> **Status:** pre-release (`0.1.0`). The `package.json` is configured for npm publication (`@webarkit/camera-view`), and the package is not published to the public registry yet.
-
 ---
+
+## Installation
+
+```bash
+npm install @webarkit/camera-view
+```
+
+Or with Yarn:
+
+```bash
+yarn add @webarkit/camera-view
+```
 
 ## Quick start
 

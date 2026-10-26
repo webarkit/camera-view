@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-10-26
+
 ### Added
 
 - Initial extraction of `CameraView` and `getProcessGeometry()` from `webarkit/ARnft` ([#370](https://github.com/webarkit/ARnft/issues/370)).
@@ -15,3 +17,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Instance-scoped `"geometrychange"` (`CustomEvent<FrameGeometry>`) and `"ended"` events on `CameraView`.
 - Explicit lifecycle `state` (`"idle" | "initializing" | "ready" | "ended" | "destroyed"`) and typed `CameraViewError` codes (`NOT_SUPPORTED`, `NOT_INITIALIZED`, `ALREADY_INITIALIZED`, `STREAM_ENDED`, `DESTROYED`, `INVALID_OPTIONS`).
 - Interactive Vite demo in `examples/` and two-project Vitest suite (`unit` + `browser` with Playwright).
+
+[Unreleased]: https://github.com/webarkit/camera-view/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/webarkit/camera-view/releases/tag/v0.1.0
