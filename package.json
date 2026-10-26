@@ -1,0 +1,93 @@
+{
+  "name": "@webarkit/camera-view",
+  "version": "0.1.0",
+  "description": "Tracker-agnostic camera capture for WebAR: opens the camera, fits the video into the processing frame (letterbox / rotatePortrait) and produces throttled ImageData / ImageBitmap frames with a structured-cloneable FrameGeometry.",
+  "keywords": [
+    "WebARKit",
+    "WebAR",
+    "AR",
+    "augmented reality",
+    "camera",
+    "getUserMedia",
+    "video",
+    "ImageData",
+    "ImageBitmap",
+    "letterbox",
+    "NFT",
+    "natural feature tracking",
+    "ARnft",
+    "jsartoolkitNFT"
+  ],
+  "homepage": "https://github.com/webarkit/camera-view#readme",
+  "bugs": {
+    "url": "https://github.com/webarkit/camera-view/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webarkit/camera-view.git"
+  },
+  "license": "LGPL-3.0-or-later",
+  "author": {
+    "name": "Walter Perdan",
+    "email": "github@kalwaltart.it",
+    "url": "https://www.kalwaltart.com"
+  },
+  "contributors": [
+    "GitHub Contributors (https://github.com/webarkit/camera-view/graphs/contributors)"
+  ],
+  "type": "module",
+  "main": "./dist/camera-view.umd.cjs",
+  "module": "./dist/camera-view.mjs",
+  "types": "./dist/types/index.d.ts",
+  "unpkg": "./dist/camera-view.umd.cjs",
+  "jsdelivr": "./dist/camera-view.umd.cjs",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/camera-view.mjs",
+      "require": "./dist/camera-view.umd.cjs",
+      "default": "./dist/camera-view.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "dev": "vite --config vite.examples.config.ts",
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check:headers": "node scripts/check-license-headers.mjs",
+    "test": "vitest run",
+    "test:unit": "vitest run --project unit",
+    "test:browser": "vitest run --project browser",
+    "test:coverage": "vitest run --project unit --coverage",
+    "test:watch": "vitest --project unit",
+    "verify": "npm run format:check && npm run check:headers && npm run typecheck && npm run test:coverage && npm run build",
+    "prepublishOnly": "npm run verify && npm run test:browser"
+  },
+  "devDependencies": {
+    "@vitest/browser-playwright": "5.0.5",
+    "@vitest/coverage-v8": "5.0.5",
+    "fast-check": "^4.3.0",
+    "happy-dom": "21.0.4",
+    "playwright": "1.64.1",
+    "prettier": "3.9.10",
+    "typescript": "^6.0.3",
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
+  }
+}

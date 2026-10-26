@@ -1,0 +1,9 @@
+node_modules/
+dist/
+coverage/
+package-lock.json
+LICENSE
+CHANGELOG.md
+*.md
+.agents/skills/**/resources/
+test/browser/__screenshots__/
